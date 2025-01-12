@@ -13,4 +13,3 @@ final class ImagesListCell: UITableViewCell {
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var dateLabel: UILabel!
 }
-
