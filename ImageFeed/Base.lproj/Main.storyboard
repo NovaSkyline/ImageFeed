@@ -67,6 +67,11 @@
                                                 <constraint firstItem="iTu-DP-4tE" firstAttribute="top" secondItem="oCE-FV-MJf" secondAttribute="top" id="yZj-73-4py"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImage" destination="oCE-FV-MJf" id="m1B-P7-XLu"/>
+                                            <outlet property="dateLabel" destination="Fh8-k6-XOR" id="x0Y-Jc-moE"/>
+                                            <outlet property="likeButton" destination="iTu-DP-4tE" id="qhf-rz-TJz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
