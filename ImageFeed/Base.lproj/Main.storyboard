@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x4J-VI-XJd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,9 +98,94 @@
             </objects>
             <point key="canvasLocation" x="61" y="93"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="Kl3-wH-Pvq">
+            <objects>
+                <viewController title="Profile" id="x4J-VI-XJd" customClass="ProfileViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0zF-mq-irZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-dQ-MF4" userLabel="Name Label">
+                                <rect key="frame" x="16" y="158" width="382" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjg-y2-nkq" userLabel="Login Name Label">
+                                <rect key="frame" x="16" y="193.5" width="382" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="YPGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnx-ob-rRB" userLabel="Description Label">
+                                <rect key="frame" x="16" y="217.5" width="382" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="nmz-ps-i6Z" userLabel="Avatar Image View">
+                                <rect key="frame" x="16" y="80" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="cGC-fb-Sgr"/>
+                                    <constraint firstAttribute="width" secondItem="nmz-ps-i6Z" secondAttribute="height" multiplier="1:1" id="i7M-c4-yj1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-Ja-eis" userLabel="Logout Button">
+                                <rect key="frame" x="354" y="128" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="4sd-d2-cwl"/>
+                                    <constraint firstAttribute="height" constant="44" id="A13-lY-P4h"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="logout_button"/>
+                                <connections>
+                                    <action selector="didTapLogoutButton" destination="x4J-VI-XJd" eventType="touchUpInside" id="rfd-2B-zSm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wxg-Jx-N6M"/>
+                        <color key="backgroundColor" name="YPBlack"/>
+                        <constraints>
+                            <constraint firstItem="Rnx-ob-rRB" firstAttribute="top" secondItem="xjg-y2-nkq" secondAttribute="bottom" constant="8" id="4VT-MW-4N2"/>
+                            <constraint firstItem="xjg-y2-nkq" firstAttribute="top" secondItem="Gip-dQ-MF4" secondAttribute="bottom" constant="8" id="4dt-dh-cmZ"/>
+                            <constraint firstItem="Rnx-ob-rRB" firstAttribute="leading" secondItem="Gip-dQ-MF4" secondAttribute="leading" id="HZl-k7-GS4"/>
+                            <constraint firstItem="Gip-dQ-MF4" firstAttribute="top" secondItem="nmz-ps-i6Z" secondAttribute="bottom" constant="8" id="NX3-1S-s9b"/>
+                            <constraint firstItem="Gip-dQ-MF4" firstAttribute="leading" secondItem="nmz-ps-i6Z" secondAttribute="leading" id="OGQ-8T-3mB"/>
+                            <constraint firstItem="wxg-Jx-N6M" firstAttribute="trailing" secondItem="Gip-dQ-MF4" secondAttribute="trailing" constant="16" id="S2O-VZ-Yxy"/>
+                            <constraint firstItem="rWu-Ja-eis" firstAttribute="centerY" secondItem="nmz-ps-i6Z" secondAttribute="bottom" id="W9N-uI-x15"/>
+                            <constraint firstItem="Rnx-ob-rRB" firstAttribute="trailing" secondItem="Gip-dQ-MF4" secondAttribute="trailing" id="hc3-lv-X8c"/>
+                            <constraint firstItem="nmz-ps-i6Z" firstAttribute="top" secondItem="wxg-Jx-N6M" secondAttribute="top" constant="32" id="oo3-Mh-N9O"/>
+                            <constraint firstItem="wxg-Jx-N6M" firstAttribute="trailing" secondItem="rWu-Ja-eis" secondAttribute="trailing" constant="16" id="pOT-Wk-srS"/>
+                            <constraint firstItem="xjg-y2-nkq" firstAttribute="leading" secondItem="Gip-dQ-MF4" secondAttribute="leading" id="tQw-KO-oqg"/>
+                            <constraint firstItem="xjg-y2-nkq" firstAttribute="trailing" secondItem="Gip-dQ-MF4" secondAttribute="trailing" id="ywm-Lt-wII"/>
+                            <constraint firstItem="nmz-ps-i6Z" firstAttribute="leading" secondItem="wxg-Jx-N6M" secondAttribute="leading" constant="16" id="zcj-2A-F0C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="FB5-Be-67h" userLabel="Navigation Item"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="nmz-ps-i6Z" id="AmO-tJ-CSi"/>
+                        <outlet property="descriptionLabel" destination="Rnx-ob-rRB" id="t8a-vL-d0z"/>
+                        <outlet property="loginNameLabel" destination="xjg-y2-nkq" id="Juy-3j-m0e"/>
+                        <outlet property="logoutButton" destination="rWu-Ja-eis" id="yRS-h3-EGk"/>
+                        <outlet property="nameLabel" destination="Gip-dQ-MF4" id="4ah-oR-Mat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAi-Ey-UnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="92"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="avatar" width="70" height="70"/>
         <image name="like_button_on" width="42" height="42"/>
+        <image name="logout_button" width="44" height="44"/>
+        <namedColor name="YPBlack">
+            <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="YPGray">
+            <color red="0.68235294117647061" green="0.68627450980392157" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
