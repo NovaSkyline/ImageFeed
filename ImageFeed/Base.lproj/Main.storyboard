@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eYD-nV-tb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sHV-Xw-mGx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -223,9 +223,39 @@
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="-535.04464285714278"/>
         </scene>
+        <!--Single Image View Controller-->
+        <scene sceneID="mpE-d5-JCb">
+            <objects>
+                <viewController id="sHV-Xw-mGx" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aye-Ti-XEC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12" translatesAutoresizingMaskIntoConstraints="NO" id="wKe-6P-ae3">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jcv-U7-WlX"/>
+                        <color key="backgroundColor" name="YPBlack"/>
+                        <constraints>
+                            <constraint firstItem="Jcv-U7-WlX" firstAttribute="bottom" secondItem="wKe-6P-ae3" secondAttribute="bottom" id="2v0-Re-gYy"/>
+                            <constraint firstItem="wKe-6P-ae3" firstAttribute="top" secondItem="Jcv-U7-WlX" secondAttribute="top" id="9z3-Ef-4bo"/>
+                            <constraint firstItem="wKe-6P-ae3" firstAttribute="leading" secondItem="Jcv-U7-WlX" secondAttribute="leading" id="OYF-Os-WBR"/>
+                            <constraint firstItem="Jcv-U7-WlX" firstAttribute="trailing" secondItem="wKe-6P-ae3" secondAttribute="trailing" id="TNB-bx-i9d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wKe-6P-ae3" id="QS9-S3-dAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAg-i0-RcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="-535"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="12" width="1280" height="945"/>
         <image name="avatar" width="70" height="70"/>
         <image name="like_button_on" width="42" height="42"/>
         <image name="logout_button" width="44" height="44"/>
