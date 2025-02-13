@@ -213,7 +213,7 @@
         <!--Web View View Controller-->
         <scene sceneID="mqp-AP-kdZ">
             <objects>
-                <viewController id="rW7-zQ-Sy6" customClass="WebViewViewController" customModule="Image_Feed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rW7-zQ-Sy6" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ro2-jb-cme">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,18 +226,26 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bIT-XL-OWT">
+                                <rect key="frame" x="0.0" y="92" width="414" height="4"/>
+                                <color key="progressTintColor" name="YPBlack"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tsV-hh-6lw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YDj-xZ-sX5" firstAttribute="top" secondItem="tsV-hh-6lw" secondAttribute="top" id="78A-St-QKl"/>
                             <constraint firstAttribute="bottom" secondItem="YDj-xZ-sX5" secondAttribute="bottom" id="GvZ-hl-4Jy"/>
+                            <constraint firstItem="tsV-hh-6lw" firstAttribute="trailing" secondItem="bIT-XL-OWT" secondAttribute="trailing" id="JJQ-FV-9ap"/>
                             <constraint firstAttribute="trailing" secondItem="YDj-xZ-sX5" secondAttribute="trailing" id="hy9-tY-22I"/>
                             <constraint firstItem="YDj-xZ-sX5" firstAttribute="leading" secondItem="ro2-jb-cme" secondAttribute="leading" id="j6I-1v-ATo"/>
+                            <constraint firstItem="bIT-XL-OWT" firstAttribute="leading" secondItem="tsV-hh-6lw" secondAttribute="leading" id="r33-sQ-BdB"/>
+                            <constraint firstItem="bIT-XL-OWT" firstAttribute="top" secondItem="tsV-hh-6lw" secondAttribute="top" id="se6-hv-VEk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mlh-GZ-lox"/>
                     <connections>
+                        <outlet property="progressView" destination="bIT-XL-OWT" id="Ixw-eQ-nQs"/>
                         <outlet property="webView" destination="YDj-xZ-sX5" id="oXx-1I-Lge"/>
                     </connections>
                 </viewController>
@@ -248,7 +256,7 @@
         <!--Auth View Controller-->
         <scene sceneID="0rc-6s-VBW">
             <objects>
-                <viewController id="9Jl-oa-Uhj" customClass="AuthViewController" customModule="Image_Feed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Jl-oa-Uhj" customClass="AuthViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r4R-6y-3cQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
